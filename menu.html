@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Nusakata</title>
+    <!-- Tambah Google Fonts untuk font cantik -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('Gambar/background 1.jpg'); /* Background utama tanpa kabur */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay semi-transparent untuk readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3); /* Sedikit gelap untuk teks jelas */
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            animation: fadeInUp 1.5s ease-out; /* Animasi fade in dari bawah */
+        }
+
+        /* Ayat atas */
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 50px;
+            line-height: 1.2;
+            animation: slideInDown 1s ease-out; /* Animasi slide dari atas */
+        }
+
+        /* Menu pilihan */
+        .menu-options {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent putih */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            width: 250px;
+            text-align: center;
+            animation: fadeIn 2s ease-out 0.5s both; /* Animasi fade in dengan delay */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 165, 0, 0.9); /* Warna jingga on hover */
+            color: white;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            margin: 10px 0 0 0;
+            font-weight: 400;
+        }
+
+        /* Button kembali */
+        .back-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeIn 2.5s ease-out 1s both; /* Animasi fade in dengan delay lebih */
+        }
+
+        .back-btn:hover {
+            background-color: rgba(255, 165, 0, 0.8); /* Warna jingga on hover */
+            transform: scale(1.05);
+        }
+
+        /* Keyframes untuk animasi */
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsif untuk mobile */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .menu-options {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .menu-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Ayat atas -->
+        <h1 class="title">MULAKAN PENEROKAAN ANDA TERHADAP WARISAN BAHASA MELAYU</h1>
+        
+        <!-- 2 Pilihan menu -->
+        <div class="menu-options">
+            <a href="abjad.php" class="menu-item">
+                <h3>Senarai Kata Arkaik</h3>
+                <p>Jelajahi senarai perkataan arkaik mengikut abjad.</p>
+            </a>
+            <a href="rujukan.html" class="menu-item">
+                <h3>Sumber Kata Arkaik</h3>
+                <p>Pautan maklumat kata arkaik.</p>
+            </a>
+        </div>
+        
+        <!-- Button kembali -->
+        <a href="index.html" class="back-btn">Kembali Ke Halaman Utama</a>
+    </div>
+</body>
+</html>
+

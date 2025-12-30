@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - E-Kamus Arkaik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: url('Gambar/background 1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Kotak kiri */
+        .left-box {
+            background-color: rgba(0, 0, 0, 0.55);
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            height: 300px;
+            animation: slideInLeft 1.5s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .line1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: orange;
+        }
+
+        .line2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .line3 {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Bahagian logo seperti screenshot */
+        .right-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInRight 2s ease-out 0.5s both;
+        }
+
+        .logo-oval {
+            background-color: rgba(255, 235, 240, 0.75); /* warna soft pink/cream */
+            width: 330px;
+            height: 230px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            backdrop-filter: blur(3px);
+        }
+
+        .logo-oval img {
+            width: 70%;
+            height: auto;
+        }
+
+        .start-btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            border: none;
+            background-color: #f1d21f;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .start-btn:hover {
+            background-color: #ffd500;
+            transform: translateY(-2px);
+        }
+
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInRight {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .left-box {
+                width: 90%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            .logo-oval {
+                width: 250px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Kotak kiri -->
+        <div class="left-box">
+            <h1 class="line1">SELAMAT DATANG KE NUSAKATA</h1>
+            <p class="line2">Kenali Bunyi, Hayati Makna, Warisi Bahasa Ibunda Kita</p>
+            <p class="line3">@ Kamus Digital | Dibangunkan oleh Nur Shakirah</p>
+        </div>
+
+        <!-- Kotak kanan - Logo oval -->
+        <div class="right-box">
+            <div class="logo-oval">
+                <img src="Gambar/logo 2.png" alt="Logo NusaKata">
+            </div>
+            <button class="start-btn" onclick="window.location.href='menu.html'">Mula</button>
+        </div>
+
+    </div>
+</body>
+</html>
